@@ -21,7 +21,7 @@ resource "aws_instance" "aws_instance" {
     type        = "ssh"
     user        = "var.aws_ssh_user"
     private_key = file(var.aws_private_key_path)
-    host = self.public_ip
+    host        = self.public_ip
   }
 
   provisioner "file" {
